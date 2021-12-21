@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Id d'une personne {{ persona.id }}{% endblock title %}
+
+{% block header %}
+    <a href="{% url 'url_persona_list' %}">Retourner à la liste</a> 
+{% endblock header %}
+
+{% block content %}
+    <ul>
+        <li>ID - {{ persona.id }}</li>
+        <li>Nom - {{ persona.last_name }}</li>
+        <li>Prenom - {{ persona.first_name }}</li>
+        <li>Nom d'utilisateur - {{ persona.username }}</li>
+        <li>Mot de passe - {{ persona.password }}</li>
+        <li>Age - {{ persona.age }}</li>
+        <li>Email - {{ persona.email }}</li>
+        <li>Rue - {{ persona.address_street }}</li>
+        <li>N° Rue - {{ persona.address_number }}</li>
+        <li>Ville - {{ persona.city}}</li>
+        <li>Code Postale - {{ persona.postcode }}</li>
+        <li>Pays - {{ persona.country }}</li>
+        <li>Image : <img src="{{persona.picture}}" width="300" height="200"/></li>
+    </ul>
+{% endblock content %}
